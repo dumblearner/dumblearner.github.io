@@ -1,0 +1,255 @@
+body {
+	background-color: #ffffff;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	}
+
+h1 {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 36px;
+	color: #e6e0d4;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-left: 130px;
+}
+	
+h2 {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 20px;
+	color: #5e6266;
+	width: 100%;
+	margin-top: 35px;
+}
+
+img {
+  float: right;
+}
+  
+
+p {
+	font-size:150%;
+	line-height:150%;
+}  
+
+li {
+	font-size:150%;
+	line-height:150%;
+} 
+  
+
+#content {
+	text-align: center;
+	width: 100%
+	margin-top: 0px; 
+	margin-right: auto; 
+	margin-bottom: 0px; 
+	margin-left: auto; 
+
+}
+
+#header {
+	background-image: url('./images/image4.jpg');
+	background-size: 100%;
+	background-color: #B5BEC5;
+	background-repeat: no-repeat;
+	background-position: 1px;
+	margin-top: 0px;
+    border-top: 1px solid #8d9399;
+	font-family: arial, helvetica, sans-serif;
+	float: center;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	position: fixed;
+}
+
+#content_sidebar {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+	margin-top: 80px;
+	color: #555555;
+	float: left;
+	width: 180px;
+	position: fixed;
+}
+
+#content_topbar {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+	margin-top: 80px;
+	color: #555555;
+	float: top;
+	width: 100%;
+	position: fixed;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+	margin-top: 80px;
+	color: #555555;
+	float: top;
+	width: 100%;
+	position: fixed;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.content_menu {
+	background-color: #f7f7f7;
+	background-repeat: no-repeat;
+	font-family: arial, helvetica, sans-serif;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+	float: left;
+	clear: left;
+	margin-top: 30px;
+	width: 180px;
+	padding: 0px 0px 0px 0px;
+}
+
+.content_menu div {
+  	display: block;
+    border-bottom: 1px dashed #DDDDDD;
+	font-size: 16px;
+	padding: 10px 0px 10px 0px;
+}
+
+.content_menu a {
+	text-decoration: none;
+	font-size: 14px;
+  	display: block;
+	padding: 8px 0px 8px 0px;
+	color: #555555;
+}
+
+.content_menu a:visited {
+	text-decoration: none;
+	font-size: 14px;
+  	display: block;
+	padding: 8px 0px 8px 0px;
+	color: #555555;
+}
+
+.content_menu a:active {
+	text-decoration: none;
+	font-size: 14px;
+  	display: block;
+	padding: 8px 0px 8px 0px;
+	color: #555555;
+}
+
+.content_menu a:hover {
+	text-decoration: underline;
+	font-size: 14px;
+  	display: block;
+	padding: 8px 0px 8px 0px;
+	background-color: #e5e5e5;
+	color: #000000;
+}
+
+#content_main {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 14px;
+    line-height: 130%;
+    margin-top: 120px;
+	color: #555555;
+	float: left;
+	width: 75%;
+	text-align: justify;
+}
+
+#content_main a, #content_main a:visited, #content_main a:active {
+	text-decoration: underline;
+	color: #8d9399;
+}
+
+#content_main a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+
+#content_right {
+	margin: 0 auto;
+	padding: 5px;
+	display: inline;
+	float: right;
+	width: 265px;
+}
+
+#content_left { 
+	margin: 0 auto;
+	padding: 5px;
+	display: inline;
+	float: left;
+	width: 265px;
+}
+
+#footer {
+	width: 780px;
+	border-top: 1px solid #DDDDDD;
+	text-align: center;
+	clear: both;
+	margin-top: 0px; 
+    margin-right: auto; 
+	margin-bottom: 0px; 
+	margin-left: auto; 
+}
+
+#footer_space {
+	line-height: 30px;
+	width: 780px;
+	clear: both;
+	margin-top: 0px; 
+    margin-right: auto; 
+	margin-bottom: 0px; 
+	margin-left: auto; 
+	}
+	
+#footer_right {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #DDDDDD;
+	float: right;
+	text-align: right;
+}
+
+#footer_left {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #999999;
+	float: left;
+	clear: left;
+	text-align: left;
+}
+
+#footer_right a, #footer_right a:visited, #footer_right a:active, #footer_right:hover {
+	text-decoration: none;
+	color: #999999;
+}
+
+.link-target {
+    padding-top: 120px;
+    margin-top: -75px;
+}
