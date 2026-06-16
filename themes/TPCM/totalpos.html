@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Positivity problems in enumerative and algebraic combinatorics</title>
     <link rel="stylesheet" href="../problemsstyle.css">
+<!-- Load the shared configuration -->
+<script type="text/javascript" src="../mathjax-preamble.js"></script>
+<!-- Then load MathJax -->
+<script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
 </head>
 <body>
 <div class="container">
@@ -30,30 +36,101 @@
   </div>-->
 
 
-<!-- IN PRODUCTION NOTICE -->
-<div class="production-notice">
-  <div class="production-icon">🚧</div>
-  <div class="production-content">
-    <h3>This page is still in production</h3>
-    <p>
-      The detailed list of problems here is currently being compiled. 
-      Please check back soon.
-    </p>
-    <p class="production-sub">
-      In the meantime, you can browse the other themes.
-    </p>
-  </div>
+
+
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P2.1</strong> Brenti's Eulerian triangle</div>
+<p>
+  The clean Eulerian numbers \( \cleaneuler{n}{k} \) count the number of permutations of \([n+1]\)
+  with \(k\) excedances/descents.
+  These numbers 
+  satisfy the recurrence:
+        \[
+        \cleaneuler{n}{k} = (n-k+1)\cleaneuler{n-1}{k-1} + (k+1)\cleaneuler{n-1}{k}.
+        \]
+</p>
+The matrix \(\left(\cleaneuler{n}{k}\right)_{n,k\geq 0}\) is totally positive.
+
+    <div class="problem-attribution">Origin: Posed by Francesco Brenti in 
+      <a href="https://doi.org/10.1007/978-94-015-8674-0_22">[Brenti (1996), Conjecture 6.10]</a></div>
 </div>
 
-  <a href="#" class="theme-card">
-    <h3><strong>P1.</strong> ????????</h3>
-  </a>
 
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P2.2</strong> \(acdefg\)-triangle </div>
+<p>
+  Let the lower-triangular matrix \( T = (T(n,k))_{n,k \geq 0} \) be defined by the recurrence
+  \[
+  T(n,k) = [a(n-k)+c]\,T(n-1,k-1) + (dk+e)\,T(n-1,k) + [f(n-2)+g]\,T(n-2,k-1)
+  \]
+  for \( n \geq 1 \), with initial conditions \( T(0,k) = \delta_{k0} \) and \( T(-1,k) = 0 \).
+  Here \( a, c, d, e, f, g \) are treated as algebraic indeterminates, so that the matrix entries belong to the polynomial ring \( \mathbb{Z}[a,c,d,e,f,g] \).
+</p>
 <br>
+<p>
+The matrix \( T = (T(n,k))_{n,k \geq 0} \) is coefficientwise totally positive in the indeterminates \( a, c, d, e, f, g \).
+</p>
+    <div class="problem-attribution">Origin: Posed by Xi Chen, Bishal Deb, Alexander Dyachenko, Tomack Gilmore, and Alan D. Sokal in 
+      <a href="https://www.mat.univie.ac.at/~slc/wpapers/FPSAC2021/30Chen.pdf">[Chen et. al., Conjecture 1.4]</a></div>
+</div>
 
- 
-    <h3><strong>P2.</strong> ???????</h3>
+<div class="problem-remarks">
+  <span class="remark-label">Remarks:</span>
+  <ul style="margin: 0.3rem 0 0 1.2rem; padding: 0;">
+    <li>Conjecture P2.1 has been verified upto \(512 \times 512\) by Alex Dyachenko.</li>
+    <li>Conjecture P2.2 has been verified up to \( 13 \times 13 \); the computation took 109 days of CPU time.
+    It implies Conjecture P2.1 via the specialization \( (a,c,d,e,f,g) = (1,1,1,1,0,0) \).</li>
+    <li>In their <a href="https://curate.nd.edu/articles/thesis/Some_Combinatorial_Problems_Involving_Total_Non-Negativity_and_Unimodality/28786115?file=54098216">PhD thesis</a>, Yufei Zhang showed that for \(a=d=1,f=g=0\), fixed real numbers \(c,e\geq 0\), \(k\in \mathbb{N}\), 
+    and sufficiently large \(n\),
+    the \(k\)-minors given by rows \([n,n+k-1]\) and columns \([1,k]\) 
+    is always non-negative.
+  </li>
+  <li> Also see <a href="https://arxiv.org/pdf/2410.09897">list of open problems by Brenti</a>.
+  </ul>
+</div>
 
+
+
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P2.3</strong> \(r\)-th order Eulerian triangle </div>
+<p>
+  The \(r\)-th order Eulerian numbers \( \euler{n}{k}^{(r)} \) 
+  counts the number of Stirling permutations of the multiset \(\{1^r,\ldots,n^r\}\) with \(k\) ascents.
+  They satisfy the recurrence
+  \[
+  \euler{n}{k}^{(r)} = \big[rn - k - (r-1)\big] \euler{n-1}{k-1}^{(r)} + (k+1)\euler{n-1}{k}^{(r)}
+  \]
+  for \( n \geq 1 \), with initial condition \( \euler{n}{k}^{(r)} = \delta_{k0} \).
+  Here \( r \geq 1 \) is a fixed integer.
+</p>
+<br>
+<p>
+(P.2.3a)  For any \( r \geq 1 \), the \( r \)-th order Eulerian triangle \( E^{(r)} = \left( \euler{n}{k}^{(r)} \right)_{n,k \geq 0} \) is totally positive.
+</p>
+
+<p>
+(P.2.3b)  For any \( r \geq 1 \), the shifted-reversed  \( r \)-th order Eulerian triangle \( E^{(r)} = \left( \euler{n}{n-k-1}^{(r)} \right)_{n,k \geq 0} \) is totally positive.
+</p>
+
+    <div class="problem-attribution">Origin: Posed by Bishal Deb, Alexander Dyachenko, and Alan Sokal in 
+      <a href="https://arxiv.org/abs/2507.18959">[Deb--Sokal (2025), Conjecture 1.7]</a></div>
+</div>
+
+
+<div class="problem-remarks">
+  <span class="remark-label">Remarks:</span>
+  <ul style="margin: 0.3rem 0 0 1.2rem; padding: 0;">
+    <li>For \(r=1\) Conjectures P2.3a,b are the same as conjecture P2.1.</li>
+    <li>Conjectures P2.3a,b has been verified upto \(256 \times 256\) for \(2\leq r \leq 6\) by Alex Dyachenko.</li>
+  </ul>
+</div>
 
 
 
@@ -67,7 +144,6 @@
       Email the maintainer
     </a>
   </div>
-
 
 
 

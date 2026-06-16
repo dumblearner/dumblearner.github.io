@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Positivity problems in enumerative and algebraic combinatorics</title>
   <link rel="stylesheet" href="../problemsstyle.css">
-  <script type="text/javascript" id="MathJax-script" async
+<!-- Load the shared configuration -->
+<script type="text/javascript" src="../mathjax-preamble.js"></script>
+<!-- Then load MathJax -->
+<script type="text/javascript" id="MathJax-script" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-  </script>
+</script>
 </head>
 <body>
 <div class="container">
@@ -21,7 +24,7 @@
   <!-- DEDICATION / CONTEXT -->
   <div class="problem-list">
     <p>
-      <h2>Theme 1.7: Stieltjes moment sequences, coefficientwise hankel total positivity associated to permutation pattern avoidance and counting</h2>
+      <h2>Theme 1.7: Permutation patterns and Stieltjes moment sequences, coefficientwise Hankel total positivity</h2>
 
     </p>
   </div>
@@ -79,12 +82,16 @@ We follow them and let \(P_n^{(1)}(x), P_n^{(2)}(x), P_n^{(3)}(x)\) denote the g
 <p>
 
 (P1.7.2a) For all \(x\geq 0\), the sequence of polynomials  \(\left(P_n^{(1)}(x)\right)_{n\geq 0}\)
-is a Stieltjes moment sequence.
+is a Stieltjes moment sequence.<br>
+See <a href="https://www.findstat.org/StatisticsDatabase/St000357/">FindStat St000357</a>, 
+<a href="https://oeis.org/A260665">OEIS A260665</a>.
 </p>
 <br>
 <p>
 (P1.7.2b) For all \(x\geq 0\), the sequence of polynomials  \(\left(P_n^{(2)}(x)\right)_{n\geq 0}\)
-is a Stieltjes moment sequence.
+is a Stieltjes moment sequence.<br>
+See <a href="https://www.findstat.org/StatisticsDatabase/St000359/">FindStat St000359</a>, 
+<a href="https://oeis.org/A260670">OEIS A260670</a>.
 </p>
 
     <div class="problem-attribution">Origin: Posed by Bishal Deb in <a href="https://arxiv.org/abs/2508.13709">[Deb (2025), Conjecture A.2]</a></div>
@@ -115,7 +122,58 @@ is coefficientwise Hankel totally positive with respect to the variable \(x\).
 
 
 
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.7.3</strong> Consecutive patterns with overlaps</div>
+<p>
+Fix a consecutive permutation pattern \(\pi\) of length \(k\). 
+Let \(a_n^{(\pi,m)}\) be the number of
+permutations of length \(k + n(k - m)\) covered by \(\pi\) with overlaps \(m\) (\(m \leq k\)). 
+Then,  \(\left(a_n^{(\pi,m)}\right)_{n\geq 0}\)
+is a Hamburger moment sequence.
+</p>
 
+
+    <div class="problem-attribution">Origin: Posed by Natasha Blitvić, Slim Kammoun, Einar Stiengrı́msson in
+      <a href="https://www.mat.univie.ac.at/~slc/wpapers/FPSAC2023/61.pdf">[Blitvić, Kammoun, Stiengrı́msson, Conjecture 1]</a></div>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.7.4</strong> Baxter permutations</div>
+<p><p>
+        A permutation \( \pi \in \mathfrak{S}_n \) is a 
+        <a href="https://en.wikipedia.org/wiki/Baxter_permutation">Baxter permutation</a>
+         if it avoids the vincular patterns \(2-41-3\) 
+        and \(3-14-2\).
+    <p>
+        The number of Baxter permutations of length \( n\), denoted \( B_n \), is given by the 
+        <a href="https://oeis.org/A001181">Baxter number</a>
+         \(B_0 =1\)
+        and for \(n\geq 1\)
+        \[
+        B_n = \sum_{k=1}^{n} \dfrac{\binom{n+1}{k-1}\binom{n+1}{k}\binom{n+1}{k+1}}{\binom{n+2}{1}\binom{n+2}{2}}.
+        \]
+    </p>
+  <br>
+    <p>
+(P.1.7.4e) The even subsequence \((B_{2n})_{n\geq 0}\) of the Baxter numbers forms a Stieltjes moment sequence.
+</p>
+<p>
+(P.1.7.4o) The odd subsequence \((B_{2n+1})_{n\geq 0}\) of the Baxter numbers forms a Stieltjes moment sequence.
+</p>
+
+    <div class="problem-attribution">Origin: Posed by Stoyan Dimitrov, Bishal Deb, Alan Sokal</a></div>
+</div>
+
+<div class="problem-remarks">
+   <span class="remark-label">Remark:</span>
+   <p>
+For both sequences \((B_{2n})_{n\geq 0}\) and \((B_{2n+1})_{n\geq 0}\), we computed the 
+first 150 terms of their S-fractions and we notice that these are non-negative.
+</p>
+</div>
 
 
 
