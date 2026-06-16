@@ -334,3 +334,151 @@
     font-size: 2.2rem;
   }
 }
+
+
+/* --- Problem Box Style --- */
+.problem-box {
+    background: #fcfcf9;          /* A very light, warm background */
+    border: 1px solid #e0ddd6;    /* A subtle border */
+    border-radius: 8px;            /* Rounded corners */
+    padding: 1.8rem 2rem;          /* Inner spacing */
+    margin-bottom: 2rem;           /* Space between boxes */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* A gentle shadow for depth */
+    transition: box-shadow 0.2s ease;
+}
+
+.problem-box:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08); /* Slightly deeper shadow on hover */
+}
+
+.problem-box .problem-title {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #1a2a3a;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #b31b1b40; /* A subtle red underline for the title */
+    padding-bottom: 0.3rem;
+}
+
+.problem-box .problem-attribution {
+    font-size: 0.9rem;
+    color: #6a6a6a;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+
+/* --- Status Badge (corner) --- */
+.problem-box {
+    position: relative;    /* Required for absolute positioning of the badge */
+    /* ... existing styles ... */
+}
+
+.status-badge {
+    position: absolute;
+    top: -0.5rem;          /* Slight overlap outside the box */
+    right: 1.5rem;         /* Position from the right edge */
+    display: inline-block;
+    padding: 0.15rem 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background: #e8e5de;
+    color: #4a4a4a;
+    border: 1px solid #d8d2c7;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    z-index: 10;           /* Ensure it stays above other content */
+}
+
+/* Status variants */
+.status-badge.open {
+    background: #b31b1b;
+    color: white;
+    border-color: #8f1414;
+}
+
+.status-badge.partial {
+    background: #d4b48c;
+    color: #3d2a1a;
+    border-color: #b38b5a;
+}
+
+.status-badge.solved {
+    background: #2a7a4a;
+    color: white;
+    border-color: #1a5a3a;
+}
+
+.status-badge.reference {
+    background: #2a4a5a;
+    color: white;
+    border-color: #1a3a4a;
+}
+
+.status-badge.conjecture {
+    background: #6a4a8a;
+    color: white;
+    border-color: #5a3a7a;
+}
+
+
+/* --- General Remarks --- */
+.problem-remarks {
+    background: #f4f6f8;           /* A cool, light grey-blue background */
+    border-left: 4px solid #2a4a5a; /* A muted blue accent line */
+    padding: 0.8rem 1.5rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    border-radius: 0 6px 6px 0;    /* Rounded on the right, sharp on the left */
+    font-size: 0.95rem;
+    color: #2a3a4a;
+}
+
+.problem-remarks strong {
+    color: #1a2a3a;
+    font-weight: 600;
+}
+
+.problem-remarks .remark-label {
+    font-weight: 600;
+    color: #2a4a5a;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-right: 0.5rem;
+    border-bottom: 2px solid #2a4a5a40;
+}
+
+/* --- Optional: Different remark variants --- */
+.problem-remarks.note {
+    background: #f4f8f4;
+    border-left-color: #2a7a4a;
+}
+
+.problem-remarks.note .remark-label {
+    color: #2a7a4a;
+    border-bottom-color: #2a7a4a40;
+}
+
+.problem-remarks.warning {
+    background: #fcf5f0;
+    border-left-color: #b38b5a;
+}
+
+.problem-remarks.warning .remark-label {
+    color: #b38b5a;
+    border-bottom-color: #b38b5a40;
+}
+
+.problem-remarks.tip {
+    background: #f0f4fa;
+    border-left-color: #3a6a8a;
+}
+
+.problem-remarks.tip .remark-label {
+    color: #3a6a8a;
+    border-bottom-color: #3a6a8a40;
+}

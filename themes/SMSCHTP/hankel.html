@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Positivity problems in enumerative and algebraic combinatorics</title>
-      <link rel="stylesheet" href="../problemsstyle.css">
+  <link rel="stylesheet" href="../problemsstyle.css">
+  <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
 </head>
 <body>
 <div class="container">
@@ -30,16 +33,82 @@
   </div>-->
 
 
-  <a href="#" class="theme-card">
-    <h3><strong>P1.</strong> Inversion enumerator for trees</h3>
-  </a>
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+
+    <div class="problem-title"><strong>P1.1</strong> Apéry polynomials: Stieltjes moment sequences</div>
+    <p>The Apéry numbers are defined by 
+\( A_n = \sum_{k=0}^{n} \binom{n}{k}^2 \binom{n+k}{k}^2 \).
+They played a key role in Apéry's 1978 proof of irrationality of \(\zeta(3)\).</p>
 
 <br>
 
- 
-    <h3><strong>P2.</strong> Inversion enumerator for trees</h3>
+<p>
+Define the Apéry polynomials to be
+\[ A_n(x) = \sum_{k=0}^{n} \binom{n}{k}^2 \binom{n+k}{k}^2 x^k. \]
+</p>
+<p>
+The sequence of real numbers \( \left(A_n(x)\right)_{n\geq 0}\) is a Stieltjes moment sequence for all \(x \geq 1\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
 
 
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.2</strong> Apéry polynomials: Coefficientwise Hankel total positivity</div>
+<p>
+The Apéry polynomials are defined by
+\[ A_n(x) = \sum_{k=0}^{n} \binom{n}{k}^2 \binom{n+k}{k}^2 x^k. \]
+</p>
+<p>
+The sequence of polynomials \( \left(A_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel total positivity in \(y\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+
+<div class="problem-remarks">
+        <span class="remark-label">Remark:</span>
+        <p>
+        The case \(x=1\) in conjecture P1.1, the Apéry numbers, was proven to be a Stieltjes moment sequence by Edgar, 
+        see <a href="https://arxiv.org/abs/2005.10733">arXiv:2005.10733</a>.
+      </p>
+      <p>
+        Conjecture P1.2 was tested up to \(12 \times 12\).
+      </p>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.3</strong> Inversion enumerators for trees</div>
+<p>
+Let \(T\) be a tree with vertex set \([n]\), rooted at the vertex \(1\).
+An inversion of \(T\) is an ordered pair \((j, k)\) of vertices such that \(j > k\)
+and the path from \(1\) to \(k\) passes through \(j\).
+Define the inversion enumerator for trees
+\[I_n(q) = \sum_{T\in \mathcal{T}_n} q^{\# {\text{inversions}}}\]
+</p>
+<p>
+The sequence of polynomials \( \left(I_{n+1}(q)\right)_{n\geq 0}\) is coefficientwise Hankel total positivity in \(q\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+<div class="problem-remarks">
+        <span class="remark-label">Remark:</span>
+        <p>
+        \(I_n(0) = (n-1)!\) and \(I_n(1) = n^{n-2}\).
+      </p>
+      <p>
+        Conjecture P1.3 was tested up to \(10 \times 10\).
+      </p>
+</div>
 
 
   <!-- CONTRIBUTION BOX (no comments, email only) -->
