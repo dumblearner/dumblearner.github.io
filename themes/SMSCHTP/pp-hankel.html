@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positivity problems in enumerative and algebraic combinatorics</title>
+  <link rel="stylesheet" href="../problemsstyle.css">
+  <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <h1>Positivity problems in enumerative and algebraic combinatorics</h1>
+  <!--div class="subhead">
+    <strong>Alan Sokal’s 70th birthday</strong> &nbsp;·&nbsp; a repository of his many conjectures
+  </div>-->
+
+  <!-- DEDICATION / CONTEXT -->
+  <div class="problem-list">
+    <p>
+      <h2>Theme 1.7: Stieltjes moment sequences, coefficientwise hankel total positivity associated to permutation pattern avoidance and counting</h2>
+
+    </p>
+  </div>
+
+  <!-- META: last update + email contact -->
+  <!--<div class="meta-grid">
+    <span class="update">📅 <strong>Last updated:</strong> 16 June 2026</span>
+    <span class="email-badge">✉️ <a href="mailto:bishal@gonitsora.com?subject=Contribution%20to%20positivity%20problems">email contributions</a></span>
+  </div>-->
+
+<p style="margin-bottom: 1.5rem;">
+    <a href="./hankel.html">← Back to Theme 1: Stieltjes Moment Sequences</a>
+</p>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.7.1</strong> The permutation patterns conjecture</div>
+<p>
+  Let \(\sigma,\pi\) be two permutations. \(\sigma\) is said to contain pattern \(\pi\) if there is a
+subsequence of \(\sigma\) that has the same relative order as \(\pi\).
+Let \({\rm Av}_n(\pi)\) denote the set of all permutations in \(\mathfrak{S}_n\) avoiding the pattern \(\pi\).
+See <a href="https://en.wikipedia.org/wiki/Permutation_pattern">Wikipedia page</a>.
+</p>
+<br>
+<p>
+  For any permutation  \(\pi\), the sequence \(\left({\rm Av}_n(\pi)\right)_{n\geq 0}\) is a Stieltjes moment sequence.
+</p>
+
+    <div class="problem-attribution">Origin: Posed by Natasha Blitvić, Slim Kammoun, Einar Stiengrı́msson, Alin Bostan, Andrew Elvey Price, Tony Guttmann, Jean-Marie Maillard, Nathan Clisby, Andrew Conway, Yuma Inoue</div>
+</div>
+
+
+
+
+
+<div class="problem-remarks">
+Before stating the next two conjectures we introduce some notation.
+
+In <a href="https://doi.org/10.1006/eujc.2001.0515">[Claesson (2001), Proposition 1]</a> 
+and 
+<a href="https://doi.org/10.1016/S0196-8858(02)00012-X">[Claesson and Mansour (2002), Proposition 2]</a>
+it was shown that with respect to being equidistributed, the twelve vincular patterns of the form \(a-bc\) or \(bc-a\)
+fall into the three classes
+\[\{1-23, 3-21, 12-3, 32-1\}\]
+\[\{1-32, 3-12, 21-3, 23-1\}\]
+\[\{2-13, 2-31, 13-2, 31-2\}\]
+Claesson and Mansour refer to these classes as Class 1, 2 and 3, respectively.
+We follow them and let \(P_n^{(1)}(x), P_n^{(2)}(x), P_n^{(3)}(x)\) denote the generating polynomials of these three classes, respectively.
+</div>
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.7.2</strong> Distribution of vincular patterns: Stieltjes moment sequences</div>
+<p>
+
+(P1.7.2a) For all \(x\geq 0\), the sequence of polynomials  \(\left(P_n^{(1)}(x)\right)_{n\geq 0}\)
+is a Stieltjes moment sequence.
+</p>
+<br>
+<p>
+(P1.7.2b) For all \(x\geq 0\), the sequence of polynomials  \(\left(P_n^{(2)}(x)\right)_{n\geq 0}\)
+is a Stieltjes moment sequence.
+</p>
+
+    <div class="problem-attribution">Origin: Posed by Bishal Deb in <a href="https://arxiv.org/abs/2508.13709">[Deb (2025), Conjecture A.2]</a></div>
+</div>
+
+
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.7.3</strong> Distribution of vincular patterns: coefficientwise Hankel total positivity</div>
+<p>
+
+(P1.7.3a) For all \(x\geq 0\), the sequence of polynomials  \(\left(P_n^{(1)}(x+1)\right)_{n\geq 0}\)
+is coefficientwise Hankel totally positive with respect to the variable \(x\).
+</p>
+<br>
+<p>
+(P1.7.3b) For all \(x\geq 0\), the sequence of polynomials  \(\left(P_n^{(2)}(x+1)\right)_{n\geq 0}\)
+is coefficientwise Hankel totally positive with respect to the variable \(x\).
+</p>
+
+
+    <div class="problem-attribution">Origin: Posed by Bishal Deb in <a href="https://arxiv.org/abs/2508.13709">[Deb (2025), Conjecture A.3]</a></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <!-- CONTRIBUTION BOX (no comments, email only) -->
+  <div class="contribute-box">
+    <span class="text">
+      <strong>📩 Contribute to a problem?</strong> 
+      Found a partial result, a counterexample, or a new reference?
+    </span>
+    <a href="mailto:bishal@gonitsora.com?subject=Contribution%20to%20positivity%20problems" class="email-btn">
+      Email the maintainer
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>
+      <strong>Positivity problems in enumerative and algebraic combinatorics</strong>  
+    </span>
+    <span>
+      maintained by <a href="https://www.bishaldeb.com">Bishal Deb</a> · 
+      <a href="../../positivity.html">problems home page</a>
+    </span>
+  </div>
+
+</body>
+</html>
