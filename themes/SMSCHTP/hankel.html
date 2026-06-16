@@ -64,7 +64,7 @@ The Apéry polynomials are defined by
 \[ A_n(x) = \sum_{k=0}^{n} \binom{n}{k}^2 \binom{n+k}{k}^2 x^k. \]
 </p>
 <p>
-The sequence of polynomials \( \left(A_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel total positivity in \(y\).
+The sequence of polynomials \( \left(A_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(y\).
 </p>
 <br>
     <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
@@ -94,7 +94,7 @@ Define the inversion enumerator for trees
 \[I_n(q) = \sum_{T\in \mathcal{T}_n} q^{\# {\text{inversions}}}\]
 </p>
 <p>
-The sequence of polynomials \( \left(I_{n+1}(q)\right)_{n\geq 0}\) is coefficientwise Hankel total positivity in \(q\).
+The sequence of polynomials \( \left(I_{n+1}(q)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(q\).
 </p>
 <br>
     <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
@@ -109,6 +109,94 @@ The sequence of polynomials \( \left(I_{n+1}(q)\right)_{n\geq 0}\) is coefficien
         Conjecture P1.3 was tested up to \(10 \times 10\).
       </p>
 </div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.4</strong> Little Domb polynomials</div>
+<p>
+  The
+<a href="https://oeis.org/A002893">little Domb numbers</a>
+are defined by 
+\(\tilde{D}_n = \sum_{k=0}^{n} \binom{n}{k}^2  \binom{2k}{k}\)
+and the little Domb polynomials are defined by 
+\[\tilde{D}_n(x) = \sum_{k=0}^{n} \binom{n}{k}^2  \binom{2k}{k} x^k\]
+</p>
+<p>
+The sequence of polynomials \( \left(\tilde{D}_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(y\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.5</strong> Domb polynomials</div>
+<p>
+  The
+<a href="https://oeis.org/A002895">Domb numbers</a>
+are defined by 
+\(D_n = \sum_{k=0}^{n} \binom{n}{k}^2  \binom{2k}{k}  \binom{2n-2k}{n-k}\)
+and the Domb polynomials are defined by 
+\[D_n(x) = \sum_{k=0}^{n} \binom{n}{k}^2  \binom{2k}{k}\binom{2n-2k}{n-k} x^k\]
+</p>
+<p>
+The sequence of polynomials \( \left(D_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(y\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.6</strong> Boros--Moll polynomials</div>
+<p>
+  The
+Boros--Moll polynomials
+are defined by 
+\[{\rm BM}_n(x) = \sum_{k=0}^{n} \binom{n+k}{k}  \binom{2n-2k}{n-k} x^k\]
+</p>
+<p>
+The sequence of polynomials \( \left({\rm BM}_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(y\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+<div class="problem-remarks">
+        <span class="remark-label">Remark:</span>
+        <p>
+        For any \(x>0\) 
+    <a href="https://doi.org/10.1016/S0377-0427(99)00081-3" t>(Boros &amp; Moll, 1999)</a>
+    showed that the sequence \( {\rm BM}_n(x) \) is a Stieltjes moment sequence 
+      </p>
+</div>
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.7</strong> The permutation patterns conjecture</div>
+<p>
+  Let \(\sigma,\pi\) be two permutations. \(\sigma\) is said to contain pattern \(\pi\) if there is a
+subsequence of \(\sigma\) that has the same relative order as \(\pi\).
+Let \({\rm Av}_n(\pi)\) denote the set of all permutations in \(\mathfrak{S}_n\) avoiding the pattern \(\pi\).
+See <a href="https://en.wikipedia.org/wiki/Permutation_pattern">Wikipedia page</a>.
+</p>
+<br>
+<p>
+  For any permutation  \(\pi\), the sequence \(\left({\rm Av}_n(\pi)\right)\) is a Stieltjes moment sequence.
+</p>
+
+    <div class="problem-attribution">Origin: Posed by Natasha Blitvić, Slim Kammoun, Einar Stiengrı́msson, Alin Bostan, Andrew Elvey Price, Tony Guttmann, Jean-Marie Maillard, Nathan Clisby, Andrew Conway, Yuma Inoue</div>
+</div>
+
+
+
+
+
+
+
 
 
   <!-- CONTRIBUTION BOX (no comments, email only) -->
