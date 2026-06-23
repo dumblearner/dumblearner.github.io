@@ -484,3 +484,12 @@
 }
 
 
+
+/* --- Conjecture Label (consistent with problem-box style) --- */
+.conjecture-label {
+
+    color: #c2185b;                /* Deep pink for good contrast and readability */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    vertical-align: left;
+}
