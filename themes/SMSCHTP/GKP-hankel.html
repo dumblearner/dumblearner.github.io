@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positivity problems in enumerative and algebraic combinatorics</title>
+  <link rel="stylesheet" href="../problemsstyle.css">
+<!-- Load the shared configuration -->
+<script type="text/javascript" src="../mathjax-preamble.js"></script>
+<!-- Then load MathJax -->
+<script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <h1>Positivity problems in enumerative and algebraic combinatorics</h1>
+  <!--div class="subhead">
+    <strong>Alan Sokal’s 70th birthday</strong> &nbsp;·&nbsp; a repository of his many conjectures
+  </div>-->
+
+  <!-- DEDICATION / CONTEXT -->
+  <div class="problem-list">
+    <p>
+      <h2>Theme 1.10: Graham--Knuth--Patashnik recurrences and Stieltjes moment sequences, coefficientwise Hankel total positivity</h2>
+
+    </p>
+  </div>
+
+  <!-- META: last update + email contact -->
+  <!--<div class="meta-grid">
+    <span class="update">📅 <strong>Last updated:</strong> 16 June 2026</span>
+    <span class="email-badge">✉️ <a href="mailto:bishal@gonitsora.com?subject=Contribution%20to%20positivity%20problems">email contributions</a></span>
+  </div>-->
+
+<p style="margin-bottom: 1.5rem;">
+    <a href="./hankel.html">← Back to Theme 1: Stieltjes Moment Sequences</a>
+</p>
+
+
+
+
+
+<!-- INTRODUCTION SECTION -->
+<div class="intro-section">
+    <h2>Graham–Knuth–Patashnik (GKP) Recurrences</h2>
+    <p>
+      Graham, Knuth, and Patashnik (GKP), in their book Concrete  Mathematics (1994) posed the following 
+      "research problem" [Problem 6.94, pp. 319 and 564]:
+      <br>
+      Problem: Develop a general theory of the solutions to the recurrence
+      \[T(n,k)  =  (\alpha n + \beta k + \gamma) \, T(n-1,k)  +  (\alpha' n + \beta' k + \gamma') \, T(n-1,k-1)\]
+      for \(n\geq 1\) and \(k\in \mathbb{Z}\) with initial condition \(T(n,k) = \delta_{k0}\).
+    </p>
+    <p>See Barbero--Salas--Villasenor (2014, 2015) and Salas--Sokal (2021).</p>
+    
+    <p>Let \(A = \{T(n,k)\}_{n,k\geq 0}\) be a triangular array satisfying the GKP recurrence. Let \(P_{n}(x) = \sum_{k=0}^n T(n,k) x^k\)
+    denote its row-generating polynomial.</p>
+
+
+    <!-- References -->
+    <div class="reference-list">
+        <span class="ref-label">Key References:</span>
+        <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem;">
+
+            <li>
+              <strong>J.F. Barbero G., J. Salas and E.J.S. Villasenor,</strong>
+              <em>Bivariate generating functions fora class of linear recurrences:  General structure</em>
+               J. Combin. Theory A125, 146--165 (2014).
+            </li>
+
+
+            <li>
+              <strong>J.F. Barbero G., J. Salas and E.J.S. Villasenor,</strong>
+              <em>Generalized Stirling permutations and forests: higher-order Eulerian and Ward numbers,</em>
+              Electron. J. Combin. 22, no. 3, paper 3.37 (2015).
+            </li>
+
+
+            <li>
+                <strong>R. L. Graham, D. E. Knuth, O. Patashnik,</strong> 
+                <em>Concrete Mathematics: A Foundation for Computer Science</em> (2nd ed.). 
+                Addison-Wesley. (1994)
+            </li>
+
+            <li>
+              <strong>J. Salas, A. D. Sokal,</strong>
+              <em>The Graham–Knuth–Patashnik Recurrence: Symmetries and Continued Fractions,</em>
+              Electron. J. Combin. 28(2), #P2.18 (2021).
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.10.1</strong> GKP recurrence: Coefficientwise Hankel total positivity</div>
+<p>
+<span class="conjecture-label">Conjecture:</span>
+The sequence of polynomials \( \left(P_n(x)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in the seven variables 
+\(\alpha,\beta,\gamma,\alpha',\beta',\gamma',x\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal (2014, unpublished) and <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v28i2p18">[Salas--Sokal (2021), Conjecture 6.9]</a>.</div>
+</div>
+
+
+
+  <!-- CONTRIBUTION BOX (no comments, email only) -->
+  <div class="contribute-box">
+    <span class="text">
+      <strong>📩 Contribute to a problem?</strong> 
+      Found a partial result, a counterexample, or a new reference?
+    </span>
+    <a href="mailto:bishal@gonitsora.com?subject=Contribution%20to%20positivity%20problems" class="email-btn">
+      Email the maintainer
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>
+      <strong>Positivity problems in enumerative and algebraic combinatorics</strong>  
+    </span>
+    <span>
+      maintained by <a href="https://www.bishaldeb.com">Bishal Deb</a> · 
+      <a href="../../positivity.html">problems home page</a>
+    </span>
+  </div>
+
+</body>
+</html>

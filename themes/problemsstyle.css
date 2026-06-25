@@ -493,3 +493,89 @@
     letter-spacing: 0.5px;
     vertical-align: left;
 }
+
+
+
+/* --- Introduction Section --- */
+.intro-section {
+    margin: 2rem 0 2.5rem 0;
+    padding: 1.5rem 2rem;
+    background: #f9f8f5;
+    border-radius: 8px;
+    border: 1px solid #e0ddd6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.intro-section h2 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #1a2a3a;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #b31b1b40;
+    padding-bottom: 0.3rem;
+}
+
+.intro-section p {
+    color: #2d2d2d;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.intro-section .definition-box {
+    background: #f4f6f8;
+    border-left: 4px solid #b31b1b;
+    padding: 1.2rem 1.8rem;
+    margin: 1.2rem 0;
+    border-radius: 0 6px 6px 0;
+    font-family: 'Palatino', 'Georgia', 'Times New Roman', serif;
+}
+
+.intro-section .definition-box strong {
+    color: #1a2a3a;
+    font-weight: 600;
+}
+
+.intro-section .definition-box {
+    font-weight: 700;
+    color: #b31b1b;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.intro-section .reference-list {
+    margin-top: 1.2rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #e0ddd6;
+    font-size: 0.95rem;
+}
+
+.intro-section .reference-list .ref-label {
+    font-weight: 600;
+    color: #2a4a5a;
+    margin-right: 0.5rem;
+}
+
+.intro-section .reference-list a {
+    color: #b31b1b;
+    text-decoration: none;
+    border-bottom: 1px dotted #b31b1b;
+}
+
+.intro-section .reference-list a:hover {
+    border-bottom: 2px solid #b31b1b;
+}
+
+.intro-section .reference-list li {
+    margin-bottom: 0.3rem;
+    list-style-type: none;
+}
+
+.intro-section .reference-list li::before {
+    content: "• ";
+    color: #b31b1b;
+    font-weight: bold;
+}
