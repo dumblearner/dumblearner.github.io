@@ -6,8 +6,10 @@ window.MathJax = {
             euler: ['{\\genfrac{\\langle}{\\rangle}{0pt}{0}{#1}{#2}}', 2],
             
             // Clean Eulerian numbers (with "clean" superscript)
-            cleaneuler: ['{\\genfrac{\\langle}{\\rangle}{0pt}{0}{#1}{#2}^{\\text{clean}}}', 2]
+            cleaneuler: ['{\\genfrac{\\langle}{\\rangle}{0pt}{0}{#1}{#2}^{\\text{clean}}}', 2],
             
+            // Bold mu
+            "bmu": "{\\boldsymbol{\\mu}}",
 
             
         }

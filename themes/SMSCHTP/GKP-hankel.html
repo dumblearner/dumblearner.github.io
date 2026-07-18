@@ -54,10 +54,12 @@
       \[T(n,k)  =  (\alpha n + \beta k + \gamma) \, T(n-1,k)  +  (\alpha' n + \beta' k + \gamma') \, T(n-1,k-1)\]
       for \(n\geq 1\) and \(k\in \mathbb{Z}\) with initial condition \(T(n,k) = \delta_{k0}\).
     </p>
-    <p>See Barbero--Salas--Villasenor (2014, 2015) and Salas--Sokal (2021).</p>
+    <p>See Barbero--Salas--Villase&ntilde;or (2014, 2015) and Salas--Sokal (2021).</p>
     
     <p>Let \(A = \{T(n,k)\}_{n,k\geq 0}\) be a triangular array satisfying the GKP recurrence. Let \(P_{n}(x) = \sum_{k=0}^n T(n,k) x^k\)
-    denote its row-generating polynomial.</p>
+    denote its row-generating polynomial.
+    Furthermore, we set \(\bmu = (\alpha,\beta,\gamma,\alpha',\beta',\gamma')\).
+  </p>
 
 
     <!-- References -->
@@ -66,14 +68,14 @@
         <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem;">
 
             <li>
-              <strong>J.F. Barbero G., J. Salas and E.J.S. Villasenor,</strong>
+              <strong>J.F. Barbero G., J. Salas and E.J.S. Villase&ntilde;or,</strong>
               <em>Bivariate generating functions fora class of linear recurrences:  General structure</em>
                J. Combin. Theory A125, 146--165 (2014).
             </li>
 
 
             <li>
-              <strong>J.F. Barbero G., J. Salas and E.J.S. Villasenor,</strong>
+              <strong>J.F. Barbero G., J. Salas and E.J.S. Villase&ntilde;or,</strong>
               <em>Generalized Stirling permutations and forests: higher-order Eulerian and Ward numbers,</em>
               Electron. J. Combin. 22, no. 3, paper 3.37 (2015).
             </li>
@@ -105,6 +107,34 @@ The sequence of polynomials \( \left(P_n(x)\right)_{n\geq 0}\) is coefficientwis
 <br>
     <div class="problem-attribution">Origin: Posed by Alan Sokal (2014, unpublished) and <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v28i2p18">[Salas--Sokal (2021), Conjecture 6.9]</a>.</div>
 </div>
+
+
+
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.10.2</strong> GKP recurrence: Coefficientwise Hankel total positivity</div>
+<p>
+In place of the usual GKP recurrence, consider instead the following recurrence:
+\[
+\widetilde{T}(n,k)  =  (\widetilde{\alpha} (n-1) + \widetilde{\beta} k + \widetilde{\gamma}) \, \widetilde{T}(n-1,k)  +  (\widetilde{\alpha}' (n-1) + \widetilde{\beta}' (k-1) + \widetilde{\gamma}') \, \widetilde{T}(n-1,k-1)
+\]
+and let \(\widetilde{P}_n(x) = \sum_{k=0}^n \widetilde{T}(n,k) x^k\).
+</p>
+<p>
+<span class="conjecture-label">Conjecture:</span>
+The sequence of polynomials \( \left(\widetilde{P}_n(x)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in the seven variables 
+\(\widetilde{\alpha},\widetilde{\beta},\widetilde{\gamma},\widetilde{\alpha}',\widetilde{\beta'},\widetilde{\gamma'},x\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal (2014, unpublished) and <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v28i2p18">[Salas--Sokal (2021), Conjecture 6.10]</a>.</div>
+</div>
+
+
+
+
+
 
 
 
