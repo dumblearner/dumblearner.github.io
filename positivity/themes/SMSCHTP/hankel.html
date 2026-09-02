@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positivity problems in enumerative and algebraic combinatorics</title>
+  <link rel="stylesheet" href="../../problemsstyle.css">
+<!-- Load the shared configuration -->
+<script type="text/javascript" src="../../mathjax-preamble.js"></script>
+<!-- Then load MathJax -->
+<script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <h1>Positivity problems in enumerative and algebraic combinatorics</h1>
+  <!--div class="subhead">
+    <strong>Alan Sokal’s 70th birthday</strong> &nbsp;·&nbsp; a repository of his many conjectures
+  </div>-->
+
+  <!-- DEDICATION / CONTEXT -->
+  <div class="problem-list">
+    <p>
+      <h2>Theme 1: Stieltjes moment sequences and coefficientwise hankel total positivity</h2>
+
+    </p>
+  </div>
+
+  <!-- META: last update + email contact -->
+  <!--<div class="meta-grid">
+    <span class="update">📅 <strong>Last updated:</strong> 16 June 2026</span>
+    <span class="email-badge">✉️ <a href="mailto:bishal@gonitsora.com?subject=Contribution%20to%20positivity%20problems">email contributions</a></span>
+  </div>-->
+
+<p>
+<a href="https://www.idpoisson.fr/elveyprice/wp-content/uploads/sites/44/2024/01/stieltjes_moment_sequences.csv">LINK</a>
+to 
+<a href="https://www.idpoisson.fr/elveyprice/en/">Andrew Elvey Price's</a>
+list of all OEIS sequences with atleast 15 terms that may be Stieltjes moment sequences (as of 25/01/2024).
+</p>
+
+<br>
+<br>
+
+
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+
+    <div class="problem-title"><strong>P1.1</strong> Apéry polynomials: Stieltjes moment sequences</div>
+    <p>The Apéry numbers are defined by 
+\( A_n = \sum_{k=0}^{n} \binom{n}{k}^2 \binom{n+k}{k}^2 \).
+They played a key role in Apéry's 1978 proof of irrationality of \(\zeta(3)\).</p>
+
+<br>
+
+<p>
+Define the Apéry polynomials to be
+\[ A_n(x) = \sum_{k=0}^{n} \binom{n}{k}^2 \binom{n+k}{k}^2 x^k. \]
+</p>
+<p>
+<span class="conjecture-label">Conjecture:</span>
+The sequence of real numbers \( \left(A_n(x)\right)_{n\geq 0}\) is a Stieltjes moment sequence for all \(x \geq 1\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.2</strong> Apéry polynomials: Coefficientwise Hankel total positivity</div>
+<p>
+The Apéry polynomials are defined by
+\[ A_n(x) = \sum_{k=0}^{n} \binom{n}{k}^2 \binom{n+k}{k}^2 x^k. \]
+</p>
+<p>
+<span class="conjecture-label">Conjecture:</span>
+The sequence of polynomials \( \left(A_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(y\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+
+<div class="problem-remarks">
+        <span class="remark-label">Remark:</span>
+        <p>
+        The case \(x=1\) in conjecture P1.1, the Apéry numbers, was proven to be a Stieltjes moment sequence by Edgar, 
+        see <a href="https://arxiv.org/abs/2005.10733">arXiv:2005.10733</a>.
+      </p>
+      <p>
+        Conjecture P1.2 was tested up to \(12 \times 12\).
+      </p>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.3</strong> Inversion enumerators for trees</div>
+<p>
+Let \(T\) be a tree with vertex set \([n]\), rooted at the vertex \(1\).
+An inversion of \(T\) is an ordered pair \((j, k)\) of vertices such that \(j > k\)
+and the path from \(1\) to \(k\) passes through \(j\).
+Define the inversion enumerator for trees
+\[I_n(q) = \sum_{T\in \mathcal{T}_n} q^{\# {\text{inversions}}}\]
+</p>
+<p>
+<span class="conjecture-label">Conjecture:</span>
+The sequence of polynomials \( \left(I_{n+1}(q)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(q\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+<div class="problem-remarks">
+        <span class="remark-label">Remark:</span>
+        <p>
+        \(I_n(0) = (n-1)!\) and \(I_n(1) = n^{n-2}\).
+      </p>
+      <p>
+        Conjecture P1.3 was tested up to \(10 \times 10\).
+      </p>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.4</strong> Little Domb polynomials</div>
+<p>
+  The
+<a href="https://oeis.org/A002893">little Domb numbers</a>
+are defined by 
+\(\tilde{D}_n = \sum_{k=0}^{n} \binom{n}{k}^2  \binom{2k}{k}\)
+and the little Domb polynomials are defined by 
+\[\tilde{D}_n(x) = \sum_{k=0}^{n} \binom{n}{k}^2  \binom{2k}{k} x^k\]
+</p>
+<p>
+<span class="conjecture-label">Conjecture:</span>
+The sequence of polynomials \( \left(\tilde{D}_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(y\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.5</strong> Domb polynomials</div>
+<p>
+  The
+<a href="https://oeis.org/A002895">Domb numbers</a>
+are defined by 
+\(D_n = \sum_{k=0}^{n} \binom{n}{k}^2  \binom{2k}{k}  \binom{2n-2k}{n-k}\)
+and the Domb polynomials are defined by 
+\[D_n(x) = \sum_{k=0}^{n} \binom{n}{k}^2  \binom{2k}{k}\binom{2n-2k}{n-k} x^k\]
+</p>
+<p>
+<span class="conjecture-label">Conjecture:</span>
+The sequence of polynomials \( \left(D_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(y\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.6</strong> Boros--Moll polynomials</div>
+<p>
+  The
+Boros--Moll polynomials
+are defined by 
+\[{\rm BM}_n(x) = \sum_{k=0}^{n} \binom{n+k}{k}  \binom{2n-2k}{n-k} x^k\]
+</p>
+<p>
+<span class="conjecture-label">Conjecture:</span>
+The sequence of polynomials \( \left({\rm BM}_n(1+y)\right)_{n\geq 0}\) is coefficientwise Hankel totally positive in \(y\).
+</p>
+<br>
+    <div class="problem-attribution">Origin: Posed by Alan Sokal</div>
+</div>
+
+<div class="problem-remarks">
+        <span class="remark-label">Remark:</span>
+        <p>
+        For any \(x>0\) 
+    <a href="https://doi.org/10.1016/S0377-0427(99)00081-3" t>(Boros &amp; Moll, 1999)</a>
+    showed that the sequence \( {\rm BM}_n(x) \) is a Stieltjes moment sequence 
+      </p>
+</div>
+
+
+
+<div class="problem-box">
+      <span class="status-badge open">Subtheme of problems</span>
+<div class="problem-title">  Permutation patterns and Stieltjes moment sequences, coefficientwise Hankel total positivity </div>
+    <p style="margin: 1rem 0;">
+        <strong>➡️ Continue to <a href="./pp-hankel.html">Theme 1.7</a></strong>
+        <br>
+        <span style="font-size: 0.9rem; color: #5a5a5a;">Problems related to Stieltjes moment sequences and coefficientwise Hankel total positivity in permutation pattern avoidance.</span>
+        <br>
+        Here the flagship problem is Problem P1.7.1.
+    </p>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Subtheme of problems</span>
+<div class="problem-title">  Maps and Stieltjes moment sequences, coefficientwise Hankel total positivity </div>
+    <p style="margin: 1rem 0;">
+        <strong>➡️ Continue to <a href="./maps-hankel.html">Theme 1.8</a></strong>
+        <br>
+        <span style="font-size: 0.9rem; color: #5a5a5a;">Problems related to Stieltjes moment sequences and coefficientwise Hankel total positivity in enumeration of graphs on surfaces.</span>
+        <br>
+    </p>
+</div>
+
+
+
+<div class="problem-box">
+      <span class="status-badge open">Open</span>
+<div class="problem-title"><strong>P1.9</strong> Generalised Jacobi--Stirling polynomials </div>
+<p>
+  The generalised Jacobi--Stirling triangle \(\left({\rm JS}_{n,k}\right)_{n,k\geq 0}\) is defined by the following recurrence
+  \[
+  {\rm JS}_{n,k}
+  =
+  {\rm JS}_{n-1,k-1}
+  +
+  (a k^2 + b k)
+  {\rm JS}_{n-1,k}
+  \]
+  with initial condition \({\rm JS}_{0,0}=1\) and \({\rm JS}_{n,k}=0\) unless \(0\leq k \leq n\).
+</p>
+<p>
+  Let \({\rm JS}_{n}(x) = \sum_{k=0}^n {\rm JS}_{n,k} x^k\) denote its row-generating polynomial.
+</p>
+<br>
+<p>
+<span class="conjecture-label">Conjecture:</span>
+The sequence of polynomials \( ({\rm JS}_n(x))_{n\geq 0} \) is coefficientwise Hankel totally positive in the indeterminates \(a, b, x\).
+</p>
+    <div class="problem-attribution">Origin: Posed by Bao-Xuan Zhu. See <a href="https://www.sciencedirect.com/science/article/pii/S000187082400210X/">[Zhu (2024), p. 26]</a> </div>
+</div>
+
+<div class="problem-remarks">
+        <span class="remark-label">Remark:</span>
+        <p>
+        Zhu in <a href="https://doi.org/10.1090/S0002-9939-2014-12008-9
+">[Zhu (2014)]</a> and <a href="https://www.sciencedirect.com/science/article/pii/S0195669818301100">[Zhu (2018)]</a> showed that the sequence  \( ({\rm JS}_n(x))_{n\geq 0} \) is  coefficientwise log-convex.
+      </p>
+</div>
+
+
+<div class="problem-box">
+      <span class="status-badge open">Subtheme of problems</span>
+<div class="problem-title">  Graham--Knuth--Patashnik recurrences and Stieltjes moment sequences, coefficientwise Hankel total positivity </div>
+    <p style="margin: 1rem 0;">
+        <strong>➡️ Continue to <a href="./GKP-hankel.html">Theme 1.10</a></strong>
+        <br>
+        <span style="font-size: 0.9rem; color: #5a5a5a;">Problems related to Stieltjes moment sequences and coefficientwise Hankel total positivity for Graham--Knuth--Patashnik recurrences.</span>
+        <br>
+    </p>
+</div>
+
+
+
+
+  <!-- CONTRIBUTION BOX (no comments, email only) -->
+  <div class="contribute-box">
+    <span class="text">
+      <strong>📩 Contribute to a problem?</strong> 
+      Found a partial result, a counterexample, or a new reference?
+    </span>
+    <a href="mailto:bishal@gonitsora.com?subject=Contribution%20to%20positivity%20problems" class="email-btn">
+      Email the maintainer
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>
+      <strong>Positivity problems in enumerative and algebraic combinatorics</strong>  
+    </span>
+    <span>
+      maintained by <a href="https://www.bishaldeb.com">Bishal Deb</a> · 
+      <a href="../../../positivity.html">problems home page</a>
+    </span>
+  </div>
+
+</body>
+</html>
