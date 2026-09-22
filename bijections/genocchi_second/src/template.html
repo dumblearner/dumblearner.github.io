@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="An animated visual proof of the D-permutation to labeled Schröder path bijection in Section 7 of Deb and Sokal, arXiv:2212.07232.">
+  <title>A permutation becomes a path · The second bijection</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 27L9 13 16 20 24 4 30 11' fill='none' stroke='%23234cbb' stroke-width='4'/%3E%3Ccircle cx='24' cy='4' r='4' fill='%23d32876'/%3E%3C/svg%3E">
+  <style>/*__STYLE__*/</style>
+</head>
+<body>
+<main>
+  <header class="masthead">
+    <div><p class="eyebrow">BIJECTIVE COMBINATORICS <span> / </span> DEB–SOKAL · §7</p><h1>A permutation becomes a <em>path.</em></h1></div>
+    <button id="fullscreen" class="quiet" title="Enter presentation mode (F)">Present <span aria-hidden="true">⛶</span></button>
+  </header>
+  <div class="toolbar">
+    <div class="direction" role="group" aria-label="Direction of the bijection">
+      <button id="encode" aria-pressed="true">σ <span>→</span> path</button>
+      <button id="decode" aria-pressed="false">path <span>→</span> σ</button>
+    </div>
+    <label class="example-select">Example <select id="example"><option value="figure">Figure 11</option><option value="small">A small cycle</option><option value="fixed">Fixed points</option><option value="random">Random D-permutation</option><option value="custom">Your permutation…</option></select></label>
+    <button id="newRandom" class="quiet" hidden>Another ↻</button>
+  </div>
+  <form id="customForm" class="custom-form" hidden>
+    <label for="customInput">D-permutation in one-line notation <span>(2–20 entries)</span></label>
+    <div><input id="customInput" autocomplete="off" spellcheck="false" value="7 1 9 2 5 4 8 6 10 3 11 12 14 13"><button class="primary" type="submit">Use permutation</button></div>
+    <p id="customError" role="alert"></p>
+  </form>
+  <section class="permutation-strip" aria-label="Permutation and cycles">
+    <div class="math sigma">σ =</div><div id="permutation" class="permutation-scroll"></div>
+    <div class="cycle-summary"><span id="cycleLabel">CYCLE DECOMPOSITION</span><div id="cycleText" class="math"></div></div>
+  </section>
+  <div class="workspace">
+    <section class="drawing" aria-label="Animated bijection">
+      <div class="panel-heading"><h2 id="pathTitle">The almost-Dyck path <i>ω</i></h2><span id="heightBadge" class="metric math">h₀ = 0</span></div>
+      <div id="pathWrap" class="svg-scroll"><svg id="path" viewBox="0 0 920 286" role="img" aria-label="The almost-Dyck path, revealed one step at a time"></svg></div>
+      <div class="panel-heading graph-heading"><h2>The growing permutation <i id="gamma">Γ₀</i></h2><span class="key" id="graphKey"><span class="ring"></span> free <span class="dot"></span> connected <span class="pink-stroke"></span> new</span></div>
+      <div class="graph-controls"><label for="graphView">View <select id="graphView"><option value="bipartite">1 · Bipartite graph</option><option value="laguerre">2 · Laguerre digraph</option><option value="arcs">3 · Crossing / nesting arcs</option></select></label><label id="linkToggle" class="connector-toggle"><input type="checkbox" id="links"> Show cycle links</label></div>
+      <div class="svg-scroll"><svg id="graph" viewBox="0 0 920 280" role="img" aria-label="Bipartite digraph with free endpoints ranked from left to right"></svg></div>
+      <div id="graphStats" class="graph-stats" hidden></div>
+      <p id="graphHint" class="graph-hint">Two rows; a solid arrow j → k′ means σ(j) = k.</p>
+      <div class="invariant"><span id="freeInvariant" class="math">f₀ = ⌈h₀ / 2⌉ = 0</span><span id="invariantText">free vertices on each row</span></div>
+    </section>
+    <aside class="explanation" aria-live="polite" aria-atomic="true">
+      <div class="chapter"><span id="stepLabel">THE IDEA</span><span id="phaseLabel">σ ↔ (ω, ξ)</span></div>
+      <h2 id="stepTitle">One step. A pair of choices.</h2>
+      <div id="stepMath" class="step-math math"></div>
+      <p id="stepDescription"></p>
+      <div id="choicePanel"></div>
+      <div id="cycleEvent" class="cycle-event" hidden></div>
+      <div id="stepFootnote" class="step-footnote"></div>
+    </aside>
+  </div>
+  <section class="transport" aria-label="Animation controls">
+    <div class="transport-main"><button id="restart" class="square" title="Restart (Home)" aria-label="Restart">↺</button><button id="previous" class="square" title="Previous step (Left arrow)" aria-label="Previous step">←</button><button id="play" class="primary play" aria-label="Play animation">▶ <span>Play</span></button><button id="next" class="square" title="Next step (Right arrow)" aria-label="Next step">→</button></div>
+    <div class="timeline"><label for="scrubber" id="progressText">Start · 0 / 14</label><input id="scrubber" type="range" min="0" max="15" step="1" value="0"><div id="milestones" class="milestones" aria-label="Jump to a construction step"></div></div>
+    <label class="speed">Pace<select id="speed"><option value="6000">Slow</option><option value="3600" selected>Gentle</option><option value="1800">Quick</option></select></label>
+  </section>
+  <div class="under-controls"><p>Space to play · ← → to step · F to present</p><button id="finish" class="text-button">See the Schröder path <span>↗</span></button></div>
+  <details class="notes">
+    <summary>The rulebook &amp; source notes <span>+</span></summary>
+    <div class="notes-grid">
+      <div><h3>The second bijection</h3><p>A D-permutation satisfies σ(i) ≥ i for odd i, and σ(i) ≤ i for even i. Read values i = 1, …, 2n. The parity of σ⁻¹(i) gives the path step: even means rise; odd means fall.</p><p>A free vertex has no permutation edge yet. Rank free vertices from left to right, starting at 0. The pair ξᵢ = (ξ′ᵢ, ξ″ᵢ) records the chosen top and bottom ranks. Where applicable, include the newly added vertex as the last candidate; choosing it gives a fixed point.</p><p>The path may touch −1. Replace every dip 0 → −1 → 0 by one horizontal step of length 2, labeled (0, 0). This is the labeled 0-Schröder path.</p></div>
+      <div><h3>Reading a labeled path backwards</h3><table class="rule-table"><thead><tr><th>Step at i</th><th>Action</th></tr></thead><tbody><tr><td>Rise, i odd</td><td>Two new free vertices; no edges.</td></tr><tr><td>Rise, i even</td><td>i → bottom candidate ξ″ᵢ.</td></tr><tr><td>Fall, i odd</td><td>Top candidate ξ′ᵢ → i′.</td></tr><tr><td>Fall, i even</td><td>Both connections, using previously free vertices.</td></tr></tbody></table><p>Solid arrows run from the top row to the bottom. Optional dotted arrows i′ → i join the two copies of each index, making cycles visible (Lemma 7.7). A peak closes a cycle exactly when its selected endpoints belong to the same open chain.</p></div>
+      <div><h3>About this animation</h3><p>Based on Bishal Deb and Alan D. Sokal, <a href="https://arxiv.org/abs/2212.07232" target="_blank" rel="noopener">Classical continued fractions for some multivariate polynomials generalizing the Genocchi and median Genocchi numbers</a> (2022), §7, especially §§7.1–7.3, Lemma 7.7, and Figure 11.</p><p><strong>Three views, one construction.</strong> The bipartite view is Figure 11’s model. The Laguerre view identifies j with j′: each vertex has indegree and outdegree at most 1, as defined in <a href="https://arxiv.org/pdf/2304.14487#page=47" target="_blank" rel="noopener">Bishal Deb’s Laguerre digraph paper, §6.2</a>. It retains this animation’s chronological step order, rather than the different edge-insertion order in that paper. Ranks always follow increasing vertex labels, even when components are rearranged.</p><p>The arc view follows Figure 1 and §2.8: increasing edges above the axis, decreasing edges below, fixed points without arcs, and arrowheads omitted. Counters use only present arcs and four distinct endpoints; joinings and pseudo-nestings are excluded.</p><p><strong>Figure 11 correction.</strong> Its printed cycle decomposition does not match its one-line permutation. This animation uses the one-line permutation and diagram; its correct cycles agree with Figure 4.</p><p>Visual homage to the colored transparencies and progressive visual proofs of <a href="https://www.imsc.res.in/~viennot/abjc-course.html" target="_blank" rel="noopener">Xavier Viennot’s The Art of Bijective Combinatorics</a>. Independently made; no affiliation. All diagrams are drawn from the computed bijection.</p><p>Random examples are generated from legal labeled paths; this is not uniform sampling of D-permutations.</p></div>
+    </div>
+  </details>
+  <footer><span>THE SECOND BIJECTION</span><span>D-permutations ↔ labeled 0-Schröder paths</span><a href="https://arxiv.org/pdf/2212.07232#page=74" target="_blank" rel="noopener">Read §7 ↗</a></footer>
+</main>
+<script>/*__MODEL__*/</script>
+<script>/*__VIEWS__*/</script>
+<script>/*__APP__*/</script>
+</body>
+</html>
